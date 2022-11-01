@@ -42,7 +42,7 @@ glftLoader.load("./assets/the_king_s_hall/scene.gltf", function (gltf) {
     const modal = gltf.scene;
     scene.add(modal)
 
-    window.addEventListener("mouseup", function () { //mousewheel
+    window.addEventListener("mousewheel", function () { //mousewheel
         console.log(camera.position);
         switch (position) {
             case 0:

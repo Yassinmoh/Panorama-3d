@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panorama</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .progress-bar-container {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #progress-bar {
+        width: 30%;
+        margin-top: 0.5%;
+        height: 2%;
+    }
+
+    progress::-moz-progress-bar {
+        background: #b78628;
+        background: -moz-linear-gradient(left, #b78628 0%, #fcc201 100%);
+        background: -webkit-linear-gradient(left, #b78628 0%, #fcc201 100%);
+        background: linear-gradient(to right, #b78628 0%, #fcc201 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#b78628', endColorstr='#fcc201', GradientType=1);
+        border-radius: 10px;
+    }
+
+    progress::-webkit-progress-value {
+        background: #b78628;
+        background: -moz-linear-gradient(left, #b78628 0%, #fcc201 100%);
+        background: -webkit-linear-gradient(left, #b78628 0%, #fcc201 100%);
+        background: linear-gradient(to right, #b78628 0%, #fcc201 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#b78628', endColorstr='#fcc201', GradientType=1);
+        border-radius: 10px;
+    }
+
+    progress::-webkit-progress-bar {
+        border-radius: 10px;
+    }
+
+    progress {
+        background: #b78628;
+        background: -moz-linear-gradient(left, #b78628 0%, #fcc201 100%);
+        background: -webkit-linear-gradient(left, #b78628 0%, #fcc201 100%);
+        background: linear-gradient(to right, #b78628 0%, #fcc201 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#b78628', endColorstr='#fcc201', GradientType=1);
+        border-radius: 10px;
+    }
+
+    label {
+        color: white;
+        font-size: 2rem;
+    }
+</style>
+
+<body>
+    <div class="progress-bar-container">
+        <label for="progress-bar">Loading...</label>
+        <progress id="progress-bar" value="0" max="100"></progress>
+    </div>
+    <script src="./index.js" type="module"></script>
+</body>
+
+</html>
